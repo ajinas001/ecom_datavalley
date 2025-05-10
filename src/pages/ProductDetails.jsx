@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../redux/cartSlice';
 import Footer from '../components/Footer';
-import { addToCompare, removeFromCompare } from '../redux/compareSlice';
+import { addToCompare, removeFromCompare } from '../redux/compareSlice.js';
 export default function ProductDetails() {
   const { id } = useParams();
   const dispatch = useDispatch();
