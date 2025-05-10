@@ -7,6 +7,7 @@ import { addToCart } from '../redux/cartSlice';
 import Footer from '../components/Footer';
 import { addToCompare, removeFromCompare } from '../redux/CompareSlice';
 
+
 export default function ProductDetails() {
   const { id } = useParams();
   const dispatch = useDispatch();
