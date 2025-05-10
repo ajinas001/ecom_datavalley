@@ -6,7 +6,7 @@ import { addToCompare, removeFromCompare } from '../redux/CompareSlice';
 export const ProductDisplay = () => {
   const dispatch = useDispatch();
   const compareItems = useSelector((state) => state.compare.items);
-  
+
   const [womenProducts, setWomenProducts] = useState([]);
   const [menProducts, setMenProducts] = useState([]);
   const [recentProducts, setRecentProducts] = useState([]);
@@ -49,7 +49,7 @@ export const ProductDisplay = () => {
 
   const handleCompareToggle = (product) => {
     const isInCompare = compareItems.some(item => item.id === product.id);
-    
+
     if (isInCompare) {
       dispatch(removeFromCompare(product.id));
       showToast('Product removed from comparison');
@@ -73,7 +73,7 @@ export const ProductDisplay = () => {
 
   const renderProductCard = (product, index) => {
     const isInCompare = compareItems.some(item => item.id === product.id);
-    
+
     return (
       <div key={index} className="group">
         <div className="relative overflow-hidden rounded-lg mb-3">
@@ -90,13 +90,12 @@ export const ProductDisplay = () => {
             <button className="p-2 rounded-full bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <Heart size={18} className="text-gray-800" />
             </button>
-            <button 
+            <button
               onClick={() => handleCompareToggle(product)}
-              className={`p-2 rounded-full transition-opacity duration-300 ${
-                isInCompare 
-                  ? 'bg-primary text-white opacity-100' 
-                  : 'bg-white opacity-0 group-hover:opacity-100'
-              }`}
+              className={`p-2 rounded-full transition-opacity duration-300 ${isInCompare
+                  ? 'bg-primary text-white'
+                  : 'bg-white'
+                }`}
             >
               <Scale size={18} className={isInCompare ? 'text-white' : 'text-gray-800'} />
             </button>
@@ -140,8 +139,8 @@ export const ProductDisplay = () => {
         {/* Compare Floating Button - Only show if items in compare */}
         {compareItems.length > 0 && (
           <div className="fixed bottom-6 right-6 z-30">
-            <a 
-              href="/compare" 
+            <a
+              href="/compare"
               className="flex items-center gap-2 bg-primary hover:bg-primary/90 text-white px-4 py-3 rounded-full shadow-lg"
             >
               <Scale size={20} />

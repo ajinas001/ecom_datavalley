@@ -25,7 +25,7 @@ export const Navbar = () => {
   return (
     <div className="relative">
       {/* Main Navbar */}
-      <nav className="bg-light dark:bg-black py-4 px-2 pt-12 md:px-6 sticky top-0 z-40">
+      <nav className="bg-light dark:bg-black py-4 px-2 pt-4 md:pt-12 md:px-6 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             {/* Left side - Menu Button */}
