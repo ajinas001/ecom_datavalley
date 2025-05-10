@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../redux/cartSlice';
 import Footer from '../components/Footer';
 import { addToCompare, removeFromCompare } from '../redux/CompareSlice';
-
+import ReviewSection from '../components/Reviewsection';
 
 
 export default function ProductDetails() {
@@ -222,7 +222,7 @@ export default function ProductDetails() {
             <span className="text-primary font-medium">{product.title}</span>
           </nav>
 
-          <div className="rounded-xl shadow-sm overflow-hidden  dark:bg-gray-800">
+          <div className="rounded-xl shadow-sm overflow-hidden dark:bg-gray-800">
             <div className="flex flex-col lg:flex-row">
               {/* Left side - Product Images */}
               <div className="lg:w-2/5 p-6 lg:p-8">
@@ -435,8 +435,14 @@ export default function ProductDetails() {
               </div>
             </div>
           </div>
+
+          {/* Review Section - Added Here */}
+          <div className="mt-12">
+            <ReviewSection productId={id} productTitle={product.title} />
+          </div>
         </div>
       </div>
       <Footer/>
     </>
-  );}
+  );
+}
