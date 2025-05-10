@@ -2,6 +2,7 @@ import React from 'react'
 import { Navbar } from '../components/Navbar'
 import Carousal from '../components/Carousal'
 import { ProductDisplay } from '../components/Product-display'
+import Footer from '../components/Footer'
 
 
 function Homepage() {
@@ -10,6 +11,7 @@ function Homepage() {
        <Navbar />
       <Carousal />
       <ProductDisplay />
+      <Footer/>
     </div>
   )
 }

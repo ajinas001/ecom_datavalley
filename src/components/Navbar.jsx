@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import {
   Menu,
   ShoppingBag,
@@ -16,6 +17,10 @@ export const Navbar = () => {
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleSearch = () => setIsSearchOpen(!isSearchOpen);
+
+  
+  const cartItems = useSelector((state) => state.cart.items);
+  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <div className="relative">
@@ -59,10 +64,12 @@ export const Navbar = () => {
                 {/* {darkMode ? <Sun size={22} /> : <Moon size={22} />} */}
               </button>
               <div className="relative">
+                <a href='/cart'>
                 <ShoppingBag size={22} className="text-dark" />
                 <span className="absolute -top-2 -right-2 text-xs rounded-full h-5 w-5 flex items-center justify-center bg-primary text-white">
-                  2
+                {cartCount>0?(cartCount):0}
                 </span>
+                </a>
               </div>
 
               <div className="relative">
