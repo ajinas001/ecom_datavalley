@@ -4,8 +4,8 @@ import { Navbar } from '../components/Navbar';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart } from '../redux/cartSlice';
-import { addToCompare, removeFromCompare } from '../redux/compareSlice';
 import Footer from '../components/Footer';
+import { addToCompare, removeFromCompare } from '../redux/CompareSlice';
 
 export default function ProductDetails() {
   const { id } = useParams();
