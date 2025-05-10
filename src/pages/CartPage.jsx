@@ -49,7 +49,7 @@ const CartPage = () => {
             <ShoppingBag size={64} className="text-gray-300 mb-6" />
             <h2 className="text-2xl font-medium text-gray-700 mb-2">Your cart is empty</h2>
             <p className="text-gray-500 mb-8">Looks like you haven't added any items to your cart yet.</p>
-            <a href="/products" className="px-6 py-3 bg-primary text-white font-medium rounded-lg  transition-colors">
+            <a href="/" className="px-6 py-3 bg-primary text-white font-medium rounded-lg  transition-colors">
               Continue Shopping
             </a>
           </div>

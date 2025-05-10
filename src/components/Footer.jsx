@@ -20,7 +20,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-teal-800 text-white mt-16 px-20">
+    <footer className="bg-teal-800 text-white mt-16 px-0 md:px-20">
       {/* Features Banner */}
       <div className=" py-6">
         <div className="container mx-auto px-4 flex flex-wrap justify-around items-center">

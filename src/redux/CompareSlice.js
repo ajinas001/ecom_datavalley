@@ -1,4 +1,4 @@
-// src/redux/compareSlice.js
+
 import { createSlice } from '@reduxjs/toolkit';
 
 // Load items from localStorage if available
