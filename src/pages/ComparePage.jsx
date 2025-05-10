@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { X, ChevronLeft, ShoppingCart, Star } from 'lucide-react';
 import { Navbar } from '../components/Navbar';
-import { removeFromCompare, clearCompare } from '../redux/compareSlice';
+import { removeFromCompare, clearCompare } from '../redux/CompareSlice';
 import { addToCart } from '../redux/cartSlice';
 import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
