@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Heart, Star, Scale } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCompare, removeFromCompare } from '../redux/compareSlice';
+import { addToCompare, removeFromCompare } from '../redux/CompareSlice';
 
 export const ProductDisplay = () => {
   const dispatch = useDispatch();
