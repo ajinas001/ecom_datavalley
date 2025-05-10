@@ -57,12 +57,12 @@ export const Navbar = () => {
               {/* <button onClick={toggleSearch}>
                 <Search size={22} className="text-dark" />
               </button> */}
- <button
+ {/* <button
                 className="text-dark dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors duration-200"
               >
                 <Moon size={22} />
-                {/* {darkMode ? <Sun size={22} /> : <Moon size={22} />} */}
-              </button>
+                {darkMode ? <Sun size={22} /> : <Moon size={22} />}
+              </button> */}
               <div className="relative">
                 <a href='/cart'>
                 <ShoppingBag size={22} className="text-dark" />
